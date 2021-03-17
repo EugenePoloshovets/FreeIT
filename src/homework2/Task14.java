@@ -1,16 +1,17 @@
-package homeWork2;
+package homework2;
 
 /*
- 16) * Определите сумму элементов одномерного массива, расположенных между
- минимальным и максимальным значениями.
+ 14) Создать массив оценок произвольной длины, вывести максимальную и минимальную оценку, её (их) номера.
  */
-public class Task16 {
+public class Task14 {
 
     public static void main(String[] args) {
 
-        int array[] = new int[(int) (Math.random() * 10 + 1)];
+        int size = (int) (Math.random() * 20);
+        System.out.println("Длина массива: " + size);
+        int array[] = new int[size];
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * 50);
+            array[i] = (int) (Math.random() * 200);
         }
         for (int j : array) {
             System.out.print(j + " ");
@@ -32,18 +33,5 @@ public class Task16 {
         }
         System.out.println("Максисальное число: " + maxValue + " и его индекс " + indexMax);
         System.out.println("Минимальное число: " + minValue + " и его индекс " + indexMin);
-        int summa = 0;
-        if (indexMax == indexMin) {
-            summa = 0;
-        } else if (indexMax > indexMin) {
-            for (int i = indexMin + 1; i < indexMax; i++) {
-                summa += array[i];
-            }
-        } else {
-            for (int i = indexMax + 1; i < indexMin; i++) {
-                summa += array[i];
-            }
-        }
-        System.out.println("Сумма элементов между max и min значениями = " + summa);
     }
 }

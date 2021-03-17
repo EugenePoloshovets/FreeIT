@@ -1,4 +1,4 @@
-package homeWork2;
+package homework2;
 
 /*
  12) Найдите сумму первых n целых чисел, которые делятся на 3.
